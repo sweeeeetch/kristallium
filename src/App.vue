@@ -10,11 +10,11 @@ onMounted(() => {
     Telegram.WebApp.requestFullscreen();
   }
 
+  isAppLoaded.value = true;
+
   if (video.value) {
     video.value.play();
   }
-
-  isAppLoaded.value = true;
 });
 </script>
 
@@ -24,7 +24,9 @@ onMounted(() => {
       v-if="isAppLoaded"
       ref="video"
       src="@/assets/video.mp4"
+      autoplay
       muted
+      playsinline
       class="h-full w-full object-cover"></video>
   </div>
 </template>
