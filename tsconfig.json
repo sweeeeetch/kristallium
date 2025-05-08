@@ -1,0 +1,19 @@
+{
+  "files": [],
+  "references": [
+    {
+      "path": "./tsconfig.node.json"
+    },
+    {
+      "path": "./tsconfig.app.json"
+    }
+  ],
+  "compilerOptions": {
+    "typeRoots": [
+      "./node_modules/@types",
+      "./node_modules/telegram-webapps-types"
+    ],
+    "types": ["./node_modules/telegram-webapps"],
+    "lib": ["ES2023", "DOM"]
+  }
+}
