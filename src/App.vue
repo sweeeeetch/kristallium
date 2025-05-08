@@ -1,10 +1,18 @@
 <script setup lang="ts">
 import { ref, onMounted } from "vue";
+
 const isAppLoaded = ref(false);
+const video = ref<HTMLVideoElement | null>(null);
 
 onMounted(() => {
   Telegram.WebApp.ready();
-  Telegram.WebApp.requestFullscreen();
+  if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+    Telegram.WebApp.requestFullscreen();
+  }
+
+  if (video.value) {
+    video.value.play();
+  }
 
   isAppLoaded.value = true;
 });
@@ -14,9 +22,9 @@ onMounted(() => {
   <div class="w-full h-full overflow-hidden">
     <video
       v-if="isAppLoaded"
+      ref="video"
       src="@/assets/video.mp4"
       muted
-      autoplay
       class="h-full w-full object-cover"></video>
   </div>
 </template>
