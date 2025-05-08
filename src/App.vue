@@ -19,7 +19,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="w-full h-full overflow-hidden">
+  <div class="w-screen h-screen overflow-hidden">
     <video
       v-if="isAppLoaded"
       ref="video"
@@ -27,7 +27,7 @@ onMounted(() => {
       autoplay
       muted
       playsinline
-      class="h-full w-full object-cover"></video>
+      class="h-screen w-screen object-cover"></video>
   </div>
 </template>
 
