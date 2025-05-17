@@ -1,0 +1,22 @@
+<svg width="641" height="711" viewBox="0 0 641 711" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    @keyframes glow {
+      0% { filter: blur(350px); opacity: 0.4; }
+      50% { filter: blur(380px); opacity: 0.6; }
+      100% { filter: blur(350px); opacity: 0.4; }
+    }
+    .glowing-sphere {
+      animation: glow 6.5s ease-in-out infinite;
+    }
+  </style>
+  <g filter="url(#filter0_f_4_62)" class="glowing-sphere">
+    <ellipse cx="641" cy="107" rx="241" ry="204" fill="#A289FF" />
+  </g>
+  <defs>
+    <filter id="filter0_f_4_62" x="0" y="-497" width="1282" height="1208" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix" />
+      <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+      <feGaussianBlur stdDeviation="200" result="effect1_foregroundBlur_4_62" />
+    </filter>
+  </defs>
+</svg>
