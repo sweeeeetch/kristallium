@@ -2,10 +2,12 @@
 import { onMounted } from "vue";
 
 onMounted(() => {
-  // Telegram.WebApp.ready();
-  // if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-  //   Telegram.WebApp.requestFullscreen();
-  // }
+  if (!Telegram.WebApp) return;
+
+  Telegram.WebApp.ready();
+  if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+    Telegram.WebApp.requestFullscreen();
+  }
 });
 </script>
 
