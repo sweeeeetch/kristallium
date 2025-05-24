@@ -8,12 +8,6 @@ onMounted(() => {
   Telegram.WebApp.ready();
   if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
     Telegram.WebApp.requestFullscreen();
-  } else if (navigator.userAgent.includes("Safari")) {
-    const allGs = document.querySelectorAll("g");
-    allGs.forEach(g => {
-      g.style.animation = "";
-      g.classList.remove("glowing-sphere");
-    });
   }
 });
 </script>
