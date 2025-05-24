@@ -6,7 +6,7 @@ import svgLoader from "vite-svg-loader";
 import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig(({ mode }) => ({
-  plugins: [vue(), vueDevTools(), svgLoader({ defaultImport: "component", svgo: false }), tailwindcss()],
+  plugins: [vue(), vueDevTools(), svgLoader({ defaultImport: "component", svgo: true }), tailwindcss()],
   resolve: {
     alias: {
       "@": fileURLToPath(new URL("./src", import.meta.url)),
