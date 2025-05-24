@@ -1,13 +1,13 @@
 <svg width="1080" height="510" viewBox="0 0 1080 510" fill="none" xmlns="http://www.w3.org/2000/svg">
   <style>
-    @keyframes glow {
+    <!-- @keyframes glow {
       0% { filter: blur(450px); opacity: 0.6; }
       50% { filter: blur(480px); opacity: 0.8; }
       100% { filter: blur(450px); opacity: 0.6; }
     }
     .glowing-sphere {
       animation: glow 8s ease-in-out infinite;
-    }
+    } -->
   </style>
   <g filter="url(#filter0_f_1_27)" class="glowing-sphere">
     <ellipse cx="539.5" cy="510" rx="573.5" ry="110" fill="#A289FF" />
