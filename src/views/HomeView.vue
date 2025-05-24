@@ -11,25 +11,25 @@ const togglePlay = () => {
   if (video.value) {
     video.value.play();
   }
+};
+
+const onVideoEnd = () => {
+  isSphereVisible.value = true;
 
   setTimeout(function () {
-    isSphereVisible.value = true;
-
-    setTimeout(function () {
-      items.value.push({
-        id: 1,
-        title: "Cпасибо что выбрали нас!<br>Войдите в профиль и заберите подарок",
-        button: false,
-      });
-    }, 250);
-    setTimeout(function () {
-      items.value.push({
-        id: 2,
-        title: "Начать",
-        button: true,
-      });
-    }, 500);
-  }, 2100);
+    items.value.push({
+      id: 1,
+      title: "Cпасибо что выбрали нас!<br>Войдите в профиль и заберите подарок",
+      button: false,
+    });
+  }, 250);
+  setTimeout(function () {
+    items.value.push({
+      id: 2,
+      title: "Начать",
+      button: true,
+    });
+  }, 500);
 };
 
 onMounted(() => {
@@ -47,7 +47,8 @@ onMounted(() => {
     muted
     playsinline
     class="h-screen w-screen absolute z-10"
-    @loadedmetadata="togglePlay"></video>
+    @loadedmetadata="togglePlay"
+    @ended="onVideoEnd"></video>
 
   <transition name="fade">
     <SphereIcon
