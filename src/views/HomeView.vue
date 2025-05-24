@@ -7,9 +7,7 @@ const video = ref<HTMLVideoElement | null>(null);
 const isSphereVisible = ref(false);
 const items = ref<any[]>([]);
 
-onMounted(() => {
-  isAppLoaded.value = true;
-
+const togglePlay = () => {
   if (video.value) {
     video.value.play();
   }
@@ -32,6 +30,12 @@ onMounted(() => {
       });
     }, 500);
   }, 2100);
+};
+
+onMounted(() => {
+  isAppLoaded.value = true;
+
+  togglePlay();
 });
 </script>
 
@@ -44,12 +48,13 @@ onMounted(() => {
     autoplay
     muted
     playsinline
-    class="h-screen w-screen absolute z-10"></video>
+    class="h-screen w-screen absolute z-10"
+    @loadedmetadata="togglePlay"></video>
 
   <transition name="fade">
     <SphereIcon
       v-if="isSphereVisible"
-      class="absolute -left-[75%] -bottom-[35%] z-20" />
+      class="absolute -left-[75%] -bottom-[32%] z-20" />
   </transition>
 
   <transition-group

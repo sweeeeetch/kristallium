@@ -13,14 +13,14 @@ onMounted(() => {
   setTimeout(function () {
     spheres.value.push({
       id: 1,
-      top: -85,
+      top: -80,
       right: -122,
     });
   }, 250);
   setTimeout(function () {
     spheres.value.push({
       id: 2,
-      top: -57,
+      top: -52,
       right: -10,
     });
   }, 500);
@@ -76,7 +76,7 @@ onMounted(() => {
       Играть
     </router-link>
   </transition>
-  <SphereIcon class="absolute overflow-visible -left-[71%] -bottom-[35%] z-20" />
+  <SphereIcon class="absolute overflow-visible -left-[71%] -bottom-[32%] z-20" />
 </template>
 
 <style scoped lang="scss"></style>
