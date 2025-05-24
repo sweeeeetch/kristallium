@@ -16,6 +16,13 @@ onMounted(() => {
 
   setTimeout(function () {
     isSphereVisible.value = true;
+    if (navigator.userAgent.includes("Safari")) {
+      const allGs = document.querySelectorAll("g");
+      allGs.forEach(g => {
+        g.style.animation = "";
+        g.classList.remove("glowing-sphere");
+      });
+    }
 
     setTimeout(function () {
       items.value.push({
@@ -49,7 +56,7 @@ onMounted(() => {
   <transition name="fade">
     <SphereIcon
       v-if="isSphereVisible"
-      class="absolute -bottom-[21%] w-full z-20" />
+      class="absolute -left-[75%] -bottom-[35%] z-20" />
   </transition>
 
   <transition-group

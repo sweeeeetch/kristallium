@@ -16,6 +16,13 @@ onMounted(() => {
       top: -65,
       right: -122,
     });
+    if (navigator.userAgent.includes("Safari")) {
+      const allGs = document.querySelectorAll("g");
+      allGs.forEach(g => {
+        g.style.animation = "";
+        g.classList.remove("glowing-sphere");
+      });
+    }
   }, 250);
   setTimeout(function () {
     spheres.value.push({
@@ -23,6 +30,13 @@ onMounted(() => {
       top: -25,
       right: -10,
     });
+    if (navigator.userAgent.includes("Safari")) {
+      const allGs = document.querySelectorAll("g");
+      allGs.forEach(g => {
+        g.style.animation = "";
+        g.classList.remove("glowing-sphere");
+      });
+    }
   }, 500);
   setTimeout(function () {
     basketballVisible.value = true;
@@ -76,7 +90,7 @@ onMounted(() => {
       Играть
     </router-link>
   </transition>
-  <SphereIcon class="absolute -bottom-[21%] w-full z-20" />
+  <SphereIcon class="absolute -left-[71%] -bottom-[35%] z-20" />
 </template>
 
 <style scoped lang="scss"></style>
