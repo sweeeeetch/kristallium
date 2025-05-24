@@ -34,8 +34,6 @@ const togglePlay = () => {
 
 onMounted(() => {
   isAppLoaded.value = true;
-
-  togglePlay();
 });
 </script>
 
