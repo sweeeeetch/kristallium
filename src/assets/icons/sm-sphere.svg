@@ -1,9 +1,9 @@
 <svg width="941" height="1011" viewBox="0 0 1282 1208" fill="none" xmlns="http://www.w3.org/2000/svg">
   <style>
     @keyframes glow {
-      0% { filter: blur(350px); opacity: 0.4; }
-      50% { filter: blur(380px); opacity: 0.6; }
-      100% { filter: blur(350px); opacity: 0.4; }
+      0% { filter: blur(350px); opacity: 0.75; }
+      50% { filter: blur(380px); opacity: 1; }
+      100% { filter: blur(350px); opacity: 0.75; }
     }
     .glowing-sphere {
       animation: glow 6.5s ease-in-out infinite;

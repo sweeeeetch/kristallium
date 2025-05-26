@@ -59,7 +59,7 @@ onMounted(() => {
   <transition-group
     name="staggered-fade"
     tag="div"
-    class="relative z-30 mt-[125%]">
+    class="relative z-30 mt-[125%] overflow-visible">
     <div
       v-for="(item, index) in items"
       :key="item.id"

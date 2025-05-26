@@ -13,14 +13,14 @@ onMounted(() => {
   setTimeout(function () {
     spheres.value.push({
       id: 1,
-      top: -75,
+      top: -67,
       right: -122,
     });
   }, 250);
   setTimeout(function () {
     spheres.value.push({
       id: 2,
-      top: -48,
+      top: -43,
       right: -10,
     });
   }, 500);
