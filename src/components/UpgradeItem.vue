@@ -77,7 +77,7 @@ const emit = defineEmits<{
       background: #888;
 
       &.filled {
-        background: #a084f3;
+        background: #a289ff;
       }
 
       &.current {

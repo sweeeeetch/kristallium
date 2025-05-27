@@ -129,7 +129,7 @@ const levels = Array.from({ length: 12 }, (_, i) => ({
   z-index: 1;
 
   &.active {
-    background-color: #4b3f7c;
+    background-color: #564989;
     color: white;
   }
 }
