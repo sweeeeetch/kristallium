@@ -1,5 +1,8 @@
 <script setup lang="ts">
+import { ref } from "vue";
+
 const user = Telegram.WebApp.initDataUnsafe.user;
+const isMobile = ref(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
 </script>
 
 <template>
@@ -8,7 +11,8 @@ const user = Telegram.WebApp.initDataUnsafe.user;
 
     <router-link
       to="/profile"
-      class="absolute top-3 right-3 flex items-center">
+      class="absolute right-3 flex items-center"
+      :class="[isMobile ? 'top-10' : 'top-3']">
       <div class="flex flex-col items-end">
         <div class="bg-white w-[185px] whitespace-nowrap min-w-fit font-medium text-black rounded-full z-20 px-4 pr-10 py-1.5 flex items-center gap-2 justify-start">
           {{ user?.first_name ?? user?.username }}

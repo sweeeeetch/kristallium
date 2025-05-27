@@ -13,7 +13,7 @@ const levels = Array.from({ length: 12 }, (_, i) => ({
 </script>
 
 <template>
-  <div class="w-screen relative text-white text-sm font-light py-10 h-screen bg-black">
+  <div class="w-screen relative text-white text-sm font-light pb-8 pt-16 h-screen bg-black">
     <SmSphereIcon class="absolute z-20 -scale-50 overflow-visible delay-300 -top-[43%] -right-[10%]" />
     <SphereIcon class="absolute overflow-visible -left-[71%] -bottom-[32%] z-20" />
 
@@ -48,7 +48,7 @@ const levels = Array.from({ length: 12 }, (_, i) => ({
 
     <router-link
       to="/upgrades"
-      class="mt-4 border border-white mx-auto block max-w-fit relative z-30 rounded-full py-2 px-18 bg-transparent">
+      class="mt-8 border border-white mx-auto block max-w-fit relative z-30 rounded-full py-2 px-18 bg-transparent">
       Улучшения
     </router-link>
   </div>

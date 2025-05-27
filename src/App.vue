@@ -11,6 +11,7 @@ tg.BackButton.onClick(() => {
 });
 
 onMounted(() => {
+  tg.BackButton.show();
   console.log(navigator.userAgent);
   if (!Telegram.WebApp.initData) return;
 

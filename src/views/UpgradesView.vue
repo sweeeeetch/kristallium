@@ -7,7 +7,7 @@ const user = Telegram.WebApp.initDataUnsafe.user;
 </script>
 
 <template>
-  <div class="w-screen relative text-white text-sm font-light py-16 h-screen bg-black">
+  <div class="w-screen relative text-white text-sm font-light pb-8 pt-16 h-screen bg-black">
     <SmSphereIcon class="absolute z-20 -scale-50 overflow-visible delay-300 -top-[67%] -right-[122%]" />
     <SmSphereIcon class="absolute z-20 -scale-50 overflow-visible delay-300 -top-[43%] -right-[10%]" />
     <SphereIcon class="absolute overflow-visible -left-[71%] -bottom-[32%] z-20" />
@@ -17,7 +17,7 @@ const user = Telegram.WebApp.initDataUnsafe.user;
     <img
       :src="user?.photo_url"
       alt=""
-      class="rounded-full w-[70px] h-[70px] mx-auto mt-12" />
+      class="rounded-full w-[70px] h-[70px] mx-auto mt-8" />
 
     <span class="font-black max-w-fit block text-center mx-auto">Доступные улучшения<br />на уровне 1</span>
 
