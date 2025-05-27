@@ -1,13 +1,25 @@
 <script setup lang="ts">
-import { onMounted } from "vue";
-import { useRouter } from "vue-router";
+import { onMounted, watch } from "vue";
+import { useRoute, useRouter } from "vue-router";
 
+const route = useRoute();
 const router = useRouter();
 
 const tg = Telegram.WebApp;
 
 tg.BackButton.onClick(() => {
   router.back();
+});
+
+watch(route, (newV) => {
+  if (
+    newV.path === "/" ||
+    newV.path === "/welcome" ||
+  ) {
+    tg.BackButton.hide();
+  } else {
+    tg.BackButton.show();
+  }
 });
 
 onMounted(() => {

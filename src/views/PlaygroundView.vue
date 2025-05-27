@@ -12,7 +12,7 @@ const isMobile = ref(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera M
     <router-link
       to="/profile"
       class="absolute right-3 flex items-center"
-      :class="[isMobile ? 'top-10' : 'top-3']">
+      :class="[isMobile ? 'top-24' : 'top-3']">
       <div class="flex flex-col items-end">
         <div class="bg-white w-[185px] whitespace-nowrap min-w-fit font-medium text-black rounded-full z-20 px-4 pr-10 py-1.5 flex items-center gap-2 justify-start">
           {{ user?.first_name ?? user?.username }}
