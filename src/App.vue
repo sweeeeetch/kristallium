@@ -12,7 +12,7 @@ tg.BackButton.onClick(() => {
 });
 
 watch(route, newV => {
-  if (newV.path === "/" || newV.path === "/welcome") {
+  if (newV.path === "/" || newV.path === "/welcome" || newV.path === "/play") {
     tg.BackButton.hide();
   } else {
     tg.BackButton.show();
