@@ -17,7 +17,7 @@ const user = Telegram.WebApp.initDataUnsafe.user;
     <img
       :src="user?.photo_url"
       alt=""
-      class="rounded-full w-[80px] h-[80px] mx-auto mt-12" />
+      class="rounded-full w-[70px] h-[70px] mx-auto mt-12" />
 
     <span class="font-black max-w-fit block text-center mx-auto">Доступные улучшения<br />на уровне 1</span>
 

@@ -13,7 +13,7 @@ const levels = Array.from({ length: 12 }, (_, i) => ({
 </script>
 
 <template>
-  <div class="w-screen relative text-white text-sm font-light py-16 h-screen bg-black">
+  <div class="w-screen relative text-white text-sm font-light py-10 h-screen bg-black">
     <SmSphereIcon class="absolute z-20 -scale-50 overflow-visible delay-300 -top-[43%] -right-[10%]" />
     <SphereIcon class="absolute overflow-visible -left-[71%] -bottom-[32%] z-20" />
 
@@ -22,12 +22,12 @@ const levels = Array.from({ length: 12 }, (_, i) => ({
     <img
       :src="user?.photo_url"
       alt=""
-      class="rounded-full w-[80px] h-[80px] mx-auto mt-12" />
+      class="rounded-full w-[70px] h-[70px] mx-auto mt-8" />
 
     <span class="text-lg max-w-fit block mx-auto">{{ user?.first_name ?? user?.username }}</span>
     <span class="font-black max-w-fit block mx-auto">Уровень 1</span>
 
-    <div class="level-map-wrapper mx-auto min-w-fit mt-24 overflow-y-auto max-h-[420px]">
+    <div class="level-map-wrapper mx-auto min-w-fit mt-16 overflow-y-auto max-h-[420px]">
       <div class="level-map">
         <div
           v-for="(level, index) in levels"
@@ -48,7 +48,7 @@ const levels = Array.from({ length: 12 }, (_, i) => ({
 
     <router-link
       to="/upgrades"
-      class="mt-6 border border-white mx-auto block max-w-fit relative z-30 rounded-full py-2 px-18 bg-transparent">
+      class="mt-4 border border-white mx-auto block max-w-fit relative z-30 rounded-full py-2 px-18 bg-transparent">
       Улучшения
     </router-link>
   </div>

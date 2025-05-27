@@ -26,7 +26,7 @@ const user = Telegram.WebApp.initDataUnsafe.user;
       <img
         :src="user?.photo_url"
         alt=""
-        class="rounded-full -ml-8 z-20 w-[80px] h-[80px]" />
+        class="rounded-full -ml-8 z-20 w-[65px] h-[65px]" />
     </router-link>
   </div>
 </template>
